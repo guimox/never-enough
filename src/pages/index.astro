@@ -1,0 +1,19 @@
+---
+import eye from "../assets/eye.jpg";
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { gsap } from "gsap";
+---
+
+<Layout title="NEVER SATISFIED">
+  <div class="relative h-screen overflow-hidden">
+    <h1 id="text" class="px-20 text-4xl absolute bottom-80 text-white md:text-6xl font-bold font-avilock uppercase" id="text">We are never satisfied</h1>
+    <Image src={eye} alt="eye" class="w-fit h-fit" />
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.from("#text", { opacity: 0, y: 50, duration: 1 }); // Animate the text using GSAP
+  });
+</script>
