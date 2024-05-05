@@ -1,5 +1,9 @@
 @font-face {
   font-family: "avilock";
-  src: url("/fonts/AvilockBold.ttf") format("truetype");
+  src: url("/public/fonts/Karita.otf") format("opentype");
   font-weight: 200;
+}
+
+h1 {
+  font-family: "avilock", "serif";
 }

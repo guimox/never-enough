@@ -6,13 +6,24 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="NEVER SATISFIED">
   <div class="relative h-screen overflow-hidden">
-    <h1 id="text" class="px-20 text-4xl fixed top-50 bottom-80 text-white md:text-6xl font-bold font-avilock uppercase" id="text">We are never satisfied</h1>
+    <div
+      id="text"
+      class="absolute bottom-4 h-fit flex flex-col gap-4 items-start justify-center px-20"
+    >
+      <h1 class="text-4xl text-white md:text-6xl uppercase">
+        We are never satisfied
+      </h1>
+      <h3 class="text-white text-xl md:text-2xl">
+        Discover why we feel the way we feel
+      </h3>
+    </div>
+
     <Image src={eye} alt="eye" class="w-full object-cover h-full" />
   </div>
 </Layout>
 
 <script is:inline>
   document.addEventListener("DOMContentLoaded", function () {
-    gsap.to("#text", { duration: 1, x: 300, ease: "bounce" });
+    gsap.to("#text", { duration: 1, y: -100, ease: "ease" });
   });
 </script>
